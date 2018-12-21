@@ -2273,7 +2273,7 @@ display: inline-block;
 		margin-right: 75px;
 	}
 	#main-banner {
-		height: 300px;
+		height: 80vh;
 	}
 	.hb-caption > .container {
 		padding: 30px 0px;
@@ -2480,9 +2480,6 @@ display: inline-block;
 		width: 420px;
 	}
 
-	#main-banner {
-		height: 250px;
-	}
 	.hb-caption > .container {
 		padding: 10px 0px;
 	}
@@ -2634,9 +2631,7 @@ display: inline-block;
 }
 
 @media screen and (max-width: 565px) {
-	#main-banner {
-		height: 210px;
-	}
+
 	.hb-caption > .container {
 		padding: 0;
 	}
@@ -2660,9 +2655,7 @@ display: inline-block;
 	#main-header ul.contact-block li {
 		margin: 0 0 10px;
 	}
-	#main-banner {
-		height: 150px;
-	}
+
 	.trust-signal-logo {
 		margin: 0px 5px;
 		max-height: 16px;
