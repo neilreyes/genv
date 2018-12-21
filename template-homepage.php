@@ -1,4 +1,4 @@
-<?php
+		<?php
 /**
  * Template Name: Home Template
  *
@@ -27,6 +27,7 @@ get_header(); ?>
 		</div>
 		<div class="hero-image-container">
 			<img src="<?php the_field('hero_image'); ?>" alt="" class="img-responsive hero-image">
+			<img src="<?php the_field('hero_image_mobile'); ?>" alt="" class="hero-image-mobile">
 		</div>
 
 		<?php if(get_field('hero_image_bottom_logos')): ?>

@@ -176,7 +176,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 99999999;
+	z-index: 1500;
 	border-top: 3px solid #2fac66;
 	-webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.20);
 	box-shadow: 0 0 5px 2px rgba(0,0,0,0.20);
@@ -409,6 +409,10 @@ body {
 }
 
 /* Hero Banner */
+.hero-image-mobile{
+	display: none;
+}
+
 #main-banner{
 	padding: 0px;
 	position: relative;
@@ -447,9 +451,10 @@ body {
 	position: relative;
 }
 
-.hero-image-container img{
+.hero-image-container .hero-image{
 	width: 100%;
 	height: auto;
+	display: block;
 }
 
 /* Trust Signal */
@@ -2179,7 +2184,6 @@ display: inline-block;
 		width: 750px;
 	}
 	.hb-caption h1 {
-		max-width: 310px;
 		font-size: 28px;
 	}
 	#featured .pod-footer h2 {
@@ -2247,11 +2251,58 @@ display: inline-block;
 }
 
 @media screen and (max-width: 767px) {
+	.sitemap-block{
+		display: none;
+	}
+
+	.plx{
+		max-height: 153px;
+	}
+
+	#trust-signal .content-wrapper{
+		text-align: center;
+	}
+
+	#mob-head-links ul li a{
+		padding: 12px 8px;
+	}
+	
+	#wrapper main{
+		padding: 130px 0 0 0;
+	}
+
+	button#responsive-menu-button{
+		top: 30px !important;
+	}
+
+	.container-fluid > .navbar-header a{
+		padding: 0 20px;
+	}
+
+	.hero-image-container .hero-image{
+		display: none;
+	}
+
+	.hb-caption{
+		display: flex;
+		align-items: center;
+	}
+
+	.hb-caption > .container{
+		text-align: center;
+	}
+
+	.hero-image-mobile{
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+
 	body {
 		padding-top: 0;
 	}
 	#main-header {
-		position: relative;
+		/* position: relative; */
 	}
 	#responsive-menu.RMOpened,
 	#click-menu {
@@ -2273,13 +2324,12 @@ display: inline-block;
 		margin-right: 75px;
 	}
 	#main-banner {
-		height: 80vh;
+		height: 60vh;
 	}
 	.hb-caption > .container {
 		padding: 30px 0px;
 	}
 	.hb-caption h1 {
-		max-width: 285px;
 		font-size: 26px;
 	}
 	.hb-caption h2 {
@@ -2291,7 +2341,7 @@ display: inline-block;
 	}
 	.trust-signal-logo {
 		margin: 0px 8px;
-		max-height: 30px;
+		max-height: 50px;
 	}
 	.pod-wrapper {
 		max-width: 365px;
@@ -2483,13 +2533,7 @@ display: inline-block;
 	.hb-caption > .container {
 		padding: 10px 0px;
 	}
-	.hb-caption h1 {
-		max-width: 225px;
-		font-size: 20px;
-	}
-	.hb-caption h2 {
-		font-size: 14px;
-	}
+
 	p.lead {
 	    font-weight: 600;
 	    color: #3A3A3A;
@@ -2503,8 +2547,7 @@ display: inline-block;
 		float: none;
 	}
 	.plx {
-//		height: 220px;
-//		max-height: 220px;
+		height: 220px;
 	}
 	#members .section-header  h2 {
 		font-size: 20px;
@@ -2610,11 +2653,10 @@ display: inline-block;
 	#mob-head-links ul li a {
 		display: block;
 		background: #24B773;
-		padding: 7px 10px;
 		color: #fff;
 		text-align: left;
 		box-sizing: border-box;
-		font-size: 14px;
+		font-size: 12px;
 		line-height: 20px;
 		font-weight: bold;
 	}
@@ -2635,14 +2677,6 @@ display: inline-block;
 	.hb-caption > .container {
 		padding: 0;
 	}
-	.hb-caption h1 {
-		max-width: 180px;
-		font-size: 16px;
-	}
-	.hb-caption h2 {
-		font-size: 12px;
-		margin: 10px 0;
-	}
 }
 
 @media screen and (max-width: 420px) {
@@ -2656,22 +2690,11 @@ display: inline-block;
 		margin: 0 0 10px;
 	}
 
-	.trust-signal-logo {
-		margin: 0px 5px;
-		max-height: 16px;
-	}
-	.hb-caption h1 {
-		max-width: 145px;
-		font-size: 13px;
-		margin: 6px 0 0;
-	}
 	.hb-caption h2 {
-		font-size: 10px;
 		margin: 5px 0px 8px;
 	}
 	.btn-lg {
 		padding: 6px 14px;
-		font-size: 14px;
 	}
 	.col-2-list li {
 		font-size: 14px;
@@ -2721,8 +2744,6 @@ display: inline-block;
 		line-height: 26px;
 	}
 	#mob-head-links ul li a {
-		padding: 5px 8px;
-		font-size: 11px;
 		line-height: 18px;
 	}
 	#mob-head-links li span {
