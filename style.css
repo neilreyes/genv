@@ -373,7 +373,7 @@ body {
 #my-navi .main-navigation li li a:focus,
 #my-navi .main-navigation li li a:hover {
 	color: #262261;
-	background: ##F7FCFF;
+	background: #F7FCFF;
 }
 
 #my-navi .main-navigation .current-menu-item > a,
@@ -2760,8 +2760,8 @@ display: inline-block;
 		margin: 0 0 20px;
 	}
 	.plx {
-//		height: 200px;
-//		max-height: 200px;
+		height: 200px;
+		max-height: 200px;
 	}
 	.my-col-prim h6 {
 		font-size: 15px;
